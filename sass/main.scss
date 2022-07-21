@@ -1,0 +1,11 @@
+@import 'config';
+body{
+    background-color: $background;
+}
+.control-panel{
+    background-color: $surface;
+    &__editor{
+        display: flex;
+        
+    }
+}
