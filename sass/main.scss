@@ -4,8 +4,69 @@ body{
 }
 .control-panel{
     background-color: $surface;
+    margin-inline: 8%;
+    margin-block: 4%;
+    padding-inline: 3%;
     &__editor{
         display: flex;
+        justify-content: space-evenly;
+        &__control{
+            flex-basis: 30%;
+            h4{
+                margin-block: 30px 10px;
+            }
+            .span{
+                display: inline-block;
+                margin-right: 50px;
+            }
+            #range{
+                display: block;
+            }
+            &__btn{
+                display: flex;
+                align-items: stretch;
+                flex-wrap: wrap;
+                button{
+                    // align-items: center;
+                    // display: flex;
+                    flex: 1;
+                    //flex-shrink: 1;
+                    //flex-basis: 0%;
+                    text-align: center;
+                    background-color: $surface;
+                    color: $primary-color;
+                    border: 1px solid $primary-color;
+                    padding-block: 5px;
+                    padding-inline: 6px;
+                    border-radius: 4px;
+                    margin-block: 2px;
+                    margin-inline: 10px;
+                }
+                button:hover{
+                    background-color: $primary-color;
+                    color: $surface;
+                    cursor: pointer;
+                    @if true{
+                        img{
+                            filter: invert(100%);
+                        }
+                    }
+                }
+                img{
+                    width: 15px;
+                }
+            }
+        }
+        &__preview{
+            flex-basis: 60%;
+            border: 4px dashed $background;
+            text-align:center;
+            img{
+                display: inline-block;
+                margin-inline: auto;
+                width: 20%;
+            }
+        }    
         
     }
 }
