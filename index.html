@@ -18,12 +18,12 @@
                 <div class="control-panel__editor__control">
                     <h4>Filter</h4>
                     <div class="control-panel__editor__control__btn">
-                        <button>Brightness</button>
-                        <button>Contrast</button>
-                        <button>Grayscale</button>
-                        <button>Saturate</button>
-                        <button>Sepia</button>
-                        <button>Invert</button>
+                        <button onclick="filter(event)">Brightness</button>
+                        <button onclick="filter(event)">Contrast</button>
+                        <button onclick="filter(event)">Grayscale</button>
+                        <button onclick="filter(event)">Saturate</button>
+                        <button onclick="filter(event)">Sepia</button>
+                        <button onclick="filter(event)">Invert</button>
                     </div>
                     <h4 class="span">Brightness</h4>
                     <h4 class="span">0%</h4>
@@ -38,12 +38,17 @@
                     </div>
                 </div>
                 <div class="control-panel__editor__preview">
-                    <img src="/icons/cloud-computing.png" alt="">
-                    <label for="file"></label>
-                    <input type="file" name="" id="file" accept="image/*">
+                    <figure class="image-container">
+                        <img id="chosen-image">
+                    </figure>
+                    <label for="upload-button">
+                        <img src="/icons/cloud-computing.png" alt="" id="img">
+                        <p>Choose an image</p>
+                    </label>
+                    <input type="file" name="" id="upload-button" accept="image/*">
                 </div>
             </div>
-            <button>Reset Filter</button>
+            <button onclick="reset()">Reset Filter</button>
             <button>Save</button>
         </div>
     </main>
